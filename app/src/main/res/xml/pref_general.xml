@@ -1,10 +1,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <SwitchPreference
-            android:key="example_switch"
-            android:title="@string/pref_title_social_recommendations"
-            android:summary="@string/pref_description_social_recommendations"
-            android:defaultValue="true"/>
+            android:key="theme_switch"
+            android:title="@string/pref_title_dark_theme"
+            android:summary="@string/pref_description_dark_theme"
+            android:defaultValue="false"/>
 
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->

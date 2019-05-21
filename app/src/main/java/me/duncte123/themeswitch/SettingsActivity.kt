@@ -32,6 +32,10 @@ class SettingsActivity : AppCompatPreferenceActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupActionBar()
+
+        resultSetter = {
+            setResult(it)
+        }
     }
 
     /**
@@ -84,6 +88,12 @@ class SettingsActivity : AppCompatPreferenceActivity() {
             // guidelines.
             bindPreferenceSummaryToValue(findPreference("example_text"))
             bindPreferenceSummaryToValue(findPreference("example_list"))
+
+            findPreference("theme_switch").setOnPreferenceChangeListener { _, _ ->
+                resultSetter(MainActivity.RESULT_CODE_THEME_UPDATED)
+
+                true
+            }
         }
 
         override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -153,6 +163,8 @@ class SettingsActivity : AppCompatPreferenceActivity() {
     }
 
     companion object {
+
+        lateinit var resultSetter: (Int) -> Unit
 
         /**
          * A preference value change listener that updates the preference's summary
