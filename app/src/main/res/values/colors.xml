@@ -7,4 +7,9 @@
     <color name="Dark_colorPrimary">#0C2197</color>
     <color name="Dark_colorPrimaryDark">#161846</color>
     <color name="Dark_colorAccent">#7C6E11</color>
+    <color name="Dark_background">#45454E</color>
+
+
+    <color name="Dark_textColor">#FFFFFF</color>
+    <color name="Dark_textColorSecond">#AFAFAF</color>
 </resources>
