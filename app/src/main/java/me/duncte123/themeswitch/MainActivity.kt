@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val SETTINGS_ACTION = 1
         const val RESULT_CODE_THEME_UPDATED = 1
+        var themeId = 0
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,10 +20,13 @@ class MainActivity : AppCompatActivity() {
             .getDefaultSharedPreferences(this)
 
         if (prefs.getBoolean("theme_switch", false)) {
+            themeId = R.style.AppTheme_Dark
             setTheme(R.style.AppTheme_Dark_NoActionBar)
         } else {
+            themeId = R.style.AppTheme
             setTheme(R.style.AppTheme_NoActionBar)
         }
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

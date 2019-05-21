@@ -16,6 +16,7 @@ import android.preference.PreferenceManager
 import android.preference.RingtonePreference
 import android.text.TextUtils
 import android.view.MenuItem
+import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * A [PreferenceActivity] that presents a set of application settings. On
@@ -30,6 +31,7 @@ import android.view.MenuItem
 class SettingsActivity : AppCompatPreferenceActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(MainActivity.themeId)
         super.onCreate(savedInstanceState)
         setupActionBar()
 
